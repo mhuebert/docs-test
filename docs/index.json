@@ -1,6 +1,3 @@
----
-layout: null
----
 {% assign pages = site.pages | where_exp:"page", "page.layout" %}
 [
   {% for page in pages %}
