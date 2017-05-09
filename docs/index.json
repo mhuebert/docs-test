@@ -1,7 +1,7 @@
 ---
 ---
 [
-  {% for page in site.pages %}
+  {% for page in site.pages | where_exp:"page", "page.layout" %}
 { "title"    : "{{ page.title | escape }}",
 "url"     : "{{ page.url }}",
 "date"     : "{{ page.date | date: "%B %d, %Y" }}"
