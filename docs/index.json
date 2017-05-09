@@ -1,9 +1,11 @@
 ---
 ---
-[{% for page in site.pages %}
+[
+  {% for page in site.pages %}
 { "title"    : "{{ page.title | escape }}",
 "url"     : "{{ page.url }}",
 "date"     : "{{ page.date | date: "%B %d, %Y" }}"
 }
 {% if forloop.last %}{% else %},{% endif %}
-{% endfor %}]
+{% endfor %}
+]
