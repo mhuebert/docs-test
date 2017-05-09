@@ -1,7 +1,8 @@
 ---
 ---
+{% assign pages = site.pages | where_exp:"page", "page.layout" %}
 [
-  {% for page in site.pages | where_exp:"page", "page.layout" %}
+  {% for page in pages %}
 { "title"    : "{{ page.title | escape }}",
   "url"     : "{{ page.url }}",
   "name"     : "{{ page.name }}",
