@@ -1,3 +1,4 @@
 ---
+layout: null
 ---
 {{ site.pages | where_exp:"page", "page.layout" | jsonify }}
