@@ -4,10 +4,8 @@
 [
   {% for page in pages %}
 { "title"    : "{{ page.title | escape }}",
-  "url"     : "{{ page.url }}",
   "name"     : "{{ page.name }}",
-  "path"     : "{{ page.path }}",
-  "date"     : "{{ page.date | date: "%B %d, %Y" }}"
+  "path"     : "{{ page.path }}"
 }
 {% if forloop.last %}{% else %},{% endif %}
 {% endfor %}
