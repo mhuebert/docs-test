@@ -7,7 +7,7 @@
   "url"     : "{{ page.url }}",
   "name"     : "{{ page.name }}",
   "path"     : "{{ page.path }}",
-"date"     : "{{ page.date | date: "%B %d, %Y" }}"
+  "date"     : "{{ page.date | date: "%B %d, %Y" }}"
 }
 {% if forloop.last %}{% else %},{% endif %}
 {% endfor %}
